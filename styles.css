@@ -57,7 +57,7 @@ body {
 }
 
 .screenshot-container {
-    flex: 0 1 300px;
+    flex: 0 1 330px;
     text-align: center;
 }
 
@@ -117,7 +117,7 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 60px;
     max-width: 1200px;
