@@ -231,7 +231,7 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .screenshot-container {
         flex: 0 1 250px;  /* Reduce the size of the screenshot */
         margin-bottom: 20px;  /* Add some space below the screenshot */
@@ -249,6 +249,7 @@ footer {
 
     .app-branding {
         justify-content: center;
+        order:-1;
     }
 
     .buttons {
