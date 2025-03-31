@@ -104,7 +104,7 @@
             event.preventDefault();
             const email = document.getElementById("email").value;
             const subject = "Google Play Store Beta Access Request";
-            const body = `New beta access request from: ${email}`;
+            const body = `Please grant access to Pact's beta to the following Google Play Store account email: ${email}`;
             window.location.href = `mailto:dividejustito@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             modal.style.display = "none";
             form.reset();
