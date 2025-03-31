@@ -111,15 +111,16 @@ h1 {
 /* Footer */
 footer {
     background-color: var(--footer-bg);
-    padding: 20px 0 20px;
+    padding: 10px 0;
     margin-top: 0px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-evenly;
-    gap: 60px;
+    gap: 40px;
     max-width: 1200px;
+    flex-wrap:nowrap;
 }
 
 .footer-section {
@@ -128,7 +129,7 @@ footer {
 
 .footer-section h3 {
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .footer-section p {
@@ -176,5 +177,6 @@ footer {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
 }
