@@ -232,6 +232,17 @@ footer {
         text-align: center;
     }
     
+    .screenshot-container {
+        flex: 0 1 250px;  /* Reduce the size of the screenshot */
+        margin-bottom: 20px;  /* Add some space below the screenshot */
+    }
+
+    .screenshot {
+        max-width: 80%;  /* Make the screenshot smaller */
+        height: auto;
+    }
+
+    
     .description {
         text-align: center;
     }
