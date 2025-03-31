@@ -123,19 +123,15 @@ footer {
 }
 
 .footer-section {
-    flex: 0; /* Changed from flex: 1 to prevent stretching */
-    min-width: 0; /* Remove min-width constraint */
     text-align: center; /* Center the text within each section */
 }
 
 .footer-section h3 {
     color: var(--primary-color);
-    margin-bottom: 20px;
     font-size: 1.2rem;
 }
 
 .footer-section p {
-    margin-bottom: 10px;
     color: var(--footer-text);
 }
 
@@ -151,9 +147,9 @@ footer {
 
 .copyright {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     border-top: 1px solid #e5e5e5;
-    margin-top: 20px;
+    margin-top: 10px;
     color: #777;
     font-size: 0.9rem;
 }
