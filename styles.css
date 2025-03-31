@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #4A6FFF;
+    --primary-color: #071343;
     --secondary-color: #333;
     --background-color: #f9f9f9;
     --text-color: #333;
@@ -44,7 +44,7 @@ body {
 
 /* Hero Section */
 .app-showcase {
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .hero-section {
@@ -175,7 +175,7 @@ footer {
     .app-branding {
         justify-content: center;
     }
-    
+
     .buttons {
         justify-content: center;
     }
