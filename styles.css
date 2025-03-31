@@ -235,6 +235,7 @@ footer {
     .screenshot-container {
         flex: 0 1 250px;  /* Reduce the size of the screenshot */
         margin-bottom: 20px;  /* Add some space below the screenshot */
+        order:2;
     }
 
     .screenshot {
@@ -245,7 +246,7 @@ footer {
     
     .description {
         text-align: center;
-        order:-1;
+        order:1;
     }
 
     .app-branding {
