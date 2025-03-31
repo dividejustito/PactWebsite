@@ -245,11 +245,11 @@ footer {
     
     .description {
         text-align: center;
+        order:-1;
     }
 
     .app-branding {
         justify-content: center;
-        order:-1;
     }
 
     .buttons {
