@@ -53,7 +53,7 @@ body {
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .screenshot-container {
@@ -112,23 +112,22 @@ h1 {
 footer {
     background-color: var(--footer-bg);
     padding: 50px 0 20px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .footer-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: 0 20px; */
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 250px;
-    margin-bottom: 30px;
+    flex: 0; /* Changed from flex: 1 to prevent stretching */
+    min-width: 0; /* Remove min-width constraint */
+    text-align: center; /* Center the text within each section */
 }
 
 .footer-section h3 {
