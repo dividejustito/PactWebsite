@@ -256,7 +256,32 @@ footer {
 }
 
 .qr-modal-content p {
-    margin-bottom: 20px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Add this to your CSS */
+.close-qr {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-qr:hover,
+.close-qr:focus {
+    color: black;
+    text-decoration: none;
 }
 
 /* Responsive Design */
