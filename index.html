@@ -31,7 +31,7 @@
                     
                     <!-- Buttons with hyperlinks -->
                     <div class="buttons">
-                        <a href="#" class="app-button">
+                        <a href="#" class="app-button" id="app-store-button">
                             <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store">
                         </a>
                         <a href="#" class="app-button" id="beta-request">
@@ -43,10 +43,10 @@
         </main>
 
         <!-- QR Code Modal -->
-        <div id="qr-modal" class="modal">
+        <div id="qr-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="qr-modal-title">
             <div class="qr-modal-content">
-                <span class="close-qr">&times;</span>
-                <h2>Download on App Store</h2>
+                <span class="close-qr" aria-label="Close">&times;</span>
+                <h2 id="qr-modal-title">Download on App Store</h2>
                 <p>Scan this QR code with your phone</p>
                 <div class="qr-code-container">
                     <!-- The QR code image will be inserted here via JavaScript -->
@@ -56,7 +56,7 @@
         </div>
 
         <!-- Popup Form -->
-        <div id="beta-form-modal" class="modal">
+        <div id="beta-form-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="beta-modal-title">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Request Google Play Store Beta Access</h2>
@@ -122,8 +122,10 @@
             qrImage.style.maxWidth = "100%";
             
             // Clear container and add new QR code
-            qrContainer.innerHTML = '';
-            qrContainer.appendChild(qrImage);
+            if (qrContainer) {
+                qrContainer.innerHTML = '';
+                qrContainer.appendChild(qrImage);
+            }
         }
 
         // Handle App Store button click
@@ -139,21 +141,26 @@
             }
         }
 
-        // Close QR modal when 'x' clicked
-        closeQrBtn.onclick = function() {
-            qrModal.style.display = "none";
+         // Close QR modal when 'x' clicked
+         if (closeQrBtn) {
+            closeQrBtn.onclick = function() {
+                qrModal.style.display = "none";
+            }
         }
 
-
-        // Open modal when button clicked
-        btn.onclick = function(event) {
-            event.preventDefault();
-            modal.style.display = "block";
+        // Open beta modal when button clicked
+        if (btn) {
+            btn.onclick = function(event) {
+                event.preventDefault();
+                modal.style.display = "block";
+            }
         }
 
-        // Close modal when 'x' clicked
-        span.onclick = function() {
-            modal.style.display = "none";
+        // Close beta modal when 'x' clicked
+        if (span) {
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
         }
 
         // Close modals when clicking outside
@@ -167,15 +174,25 @@
         }
 
         // Handle form submission
-        form.onsubmit = function(event) {
-            event.preventDefault();
-            const email = document.getElementById("email").value;
-            const subject = "Google Play Store Beta Access Request";
-            const body = `Please grant access to Pact's beta to the following Google Play Store account email: ${email}`;
-            window.location.href = `mailto:help@pactapp.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            modal.style.display = "none";
-            form.reset();
+        if (form) {
+            form.onsubmit = function(event) {
+                event.preventDefault();
+                const email = document.getElementById("email").value;
+                const subject = "Google Play Store Beta Access Request";
+                const body = `Please grant access to Pact's beta to the following Google Play Store account email: ${email}`;
+                window.location.href = `mailto:help@pactapp.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                modal.style.display = "none";
+                form.reset();
+            }
         }
+
+        // Handle ESC key press to close modals
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                modal.style.display = "none";
+                qrModal.style.display = "none";
+            }
+        });
     </script>
 </body>
 </html>
