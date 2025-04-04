@@ -255,10 +255,6 @@ footer {
     margin-top: 0;
 }
 
-.qr-modal-content p {
-    margin-bottom: 20px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-section {
