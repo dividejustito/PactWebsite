@@ -273,9 +273,6 @@ footer {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 15px;
 }
 
 .close-qr:hover,
@@ -283,6 +280,7 @@ footer {
     color: black;
     text-decoration: none;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
