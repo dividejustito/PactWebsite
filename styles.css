@@ -167,6 +167,17 @@ footer {
     background-color: rgba(0,0,0,0.4);
 }
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
@@ -256,23 +267,20 @@ footer {
 }
 
 .qr-modal-content p {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    border-radius: 8px;
-    position: relative;
+    margin: 10px 0;
+    background-color: transparent;
+    border: none;
+    width: auto;
+    padding: 0;
 }
 
 /* Add this to your CSS */
 .close-qr {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    line-height: 1;
 }
 
 .close-qr:hover,
