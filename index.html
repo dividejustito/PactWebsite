@@ -115,7 +115,7 @@
         // Generate QR code for the App Store URL
         function generateQRCode() {
             // Using Google Charts API to generate QR code
-            const qrCodeUrl = `https://chart.googleapis.com/chart?cht=qr&chl=${encodeURIComponent(appStoreUrl)}&chs=250x250&choe=UTF-8`;
+            const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(appStoreUrl)}&size=250x250`;
             const qrImage = document.createElement("img");
             qrImage.src = qrCodeUrl;
             qrImage.alt = "QR Code for App Store";
